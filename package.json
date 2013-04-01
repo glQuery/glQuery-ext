@@ -1,0 +1,14 @@
+{
+  "name": "glQuery-ext",
+  "version": "0.0.1",
+  "description": "Extensions for a fluent WebGL engine",
+  "homepage": "http://glquery.org",
+  "private": false,
+  "directories": {
+    "dist": "./dist"
+  },
+  "dependencies": {
+    "coffee-script": ">=0.0.0"
+  }
+}
+

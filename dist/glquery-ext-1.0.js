@@ -5,3 +5,7 @@
  */
 (function() {
 "use strict";
+
+  return;
+})();
+
