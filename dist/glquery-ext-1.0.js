@@ -5,6 +5,7 @@
  */
 (function() {
 "use strict";
+  var gl = glQuery;
 
   return;
 })();
