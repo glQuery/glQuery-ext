@@ -11,7 +11,7 @@
       if (self.glContext.isContextLost())
         return null;
 
-      // Render a frame manually in chrome / safari browsers
+      // Render a frame manually in chrome / safari browsers (for when this call was kicked off by an event, in which case chrome does not use the last rendered buffer available)
       // (See http://stackoverflow.com/questions/12625876/how-to-detect-chrome-and-safari-browser-webkit)
       var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
       var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
