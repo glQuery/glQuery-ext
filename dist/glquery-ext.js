@@ -16,7 +16,7 @@
       var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
       var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
       if (isChrome || isSafari)
-        gl.render(self.glContext);
+        gl(self.rootId).render(self.glContext);
 
       // Get the morpheus canvas (that was instantiated dynamically by morpheus)
       var canvasEl = self.glContext.canvas;
@@ -26,7 +26,7 @@
       var copyCanvas = document.createElement('canvas');
       copyCanvas.width = destDimensions? destDimensions[0] : canvasDimensions[0];
       copyCanvas.height = destDimensions? destDimensions[1] : canvasDimensions[1];
-      copyContext = copyCanvas.getContext('2d');
+      var copyContext = copyCanvas.getContext('2d');
       copyContext.drawImage(canvasEl,
         0, 0,
         (srcDimensions? srcDimensions[0] : canvasDimensions[0]), (srcDimensions? srcDimensions[1] : canvasDimensions[1]),
