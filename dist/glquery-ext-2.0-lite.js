@@ -20,7 +20,7 @@
 
       // Get the morpheus canvas (that was instantiated dynamically by morpheus)
       var canvasEl = self.glContext.canvas;
-      var canvasDimensions = [canvasEl.width, canvasEl.height];
+      var canvasDimensions = [Number(canvasEl.width), Number(canvasEl.height)];
 
       // Copy the contents of the clipped portion to a new canvas
       var copyCanvas = document.createElement('canvas');
@@ -31,7 +31,7 @@
         0, 0,
         (srcDimensions? srcDimensions[0] : canvasDimensions[0]), (srcDimensions? srcDimensions[1] : canvasDimensions[1]),
         0, 0,
-        copyCanvas.width, copyCanvas.height);
+        Number(copyCanvas.width), Number(copyCanvas.height));
 
       // Convert the new canvas data into a data url
       if (format == null)
